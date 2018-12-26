@@ -68,7 +68,7 @@ class ForgeBiomeRegistry implements BiomeRegistry {
 
         @Override
         public String getName() {
-            return biome.getBiomeName();
+            return biome.getDisplayName().getString();
         }
     }
 
