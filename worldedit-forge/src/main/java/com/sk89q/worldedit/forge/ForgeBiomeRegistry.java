@@ -23,6 +23,7 @@ import com.sk89q.worldedit.world.biome.BaseBiome;
 import com.sk89q.worldedit.world.biome.BiomeData;
 import com.sk89q.worldedit.world.registry.BiomeRegistry;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +41,7 @@ class ForgeBiomeRegistry implements BiomeRegistry {
     @Override
     public List<BaseBiome> getBiomes() {
         List<BaseBiome> list = new ArrayList<>();
-        for (Biome biome : Biome.REGISTRY) {
+        for (Biome biome : ForgeRegistries.BIOMES) {
             list.add(new BaseBiome(Biome.getIdForBiome(biome)));
         }
         return list;
